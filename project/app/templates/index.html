@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        .b
+        {
+            margin-top:100px;
+            margin-left:750px;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+        <div class="b">
+
+            <table border="1" >
+                <tr>
+                    <th colspan="2"><h2>STUDENT PORTAL</h2></th>
+                </tr>
+                <tr>
+                    <th><h3><a href="/app/register/"> Register </a></h3></th>
+                </tr>
+                <tr>
+                    <th><h3><a href="/app/login/">Login</a> </h3></th>
+                </tr>
+            </table>
+        </div>
+
+{% endblock %}
+</body>
+</html>

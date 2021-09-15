@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <script>
+        function t()
+        {
+            if(document.alertform.n_ame.value=="")
+            {
+                alert("Enter your name");
+                document.alertform.n_ame.focus();
+                return false;
+            }
+            if(document.alertform.e_mail.value=="")
+            {
+                alert("Enter your email id");
+                document.alertform.e_mail.focus();
+                return false;
+            }
+            if(document.alertform.m_obile.value=="")
+            {
+                alert("Enter your Mobile No.");
+                document.alertform.m_obile.focus();
+                return false;
+            }
+            if(document.alertform.a_ddress.value=="")
+            {
+                alert("Enter your address");
+                document.alertform.a_ddress.focus();
+                return false;
+            }
+
+            if(document.alertform.p_wd.value=="")
+            {
+                alert("Enter the password");
+                document.alertform.p_wd.focus();
+                return false;
+            }
+
+        }
+    </script>
+    <style>
+        .b
+        {
+            margin-top:150px;
+            margin-left:600px;
+        }
+    </style>
+</head>
+<body>
+<div class="b">
+<form name="alertform" action="login-alert.html" method="POST">
+    {% csrf_token %}
+    <table border="1">
+        <tr>
+            <th colspan="2">Register</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>
+                <input type="text" name="n_ame">
+            </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>
+                <input type="email" name="e_mail">
+            </td>
+        </tr>
+        <tr>
+            <th>Mobile No.</th>
+            <td>
+                <input type="number" name="m_obile">
+            </td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>
+                <input type="text" name="a_ddress">
+            </td>
+        </tr>
+        <!--<tr>
+            <th>Gender</th>
+            <td>
+                <input type="radio" name="g_ender">Female
+                <input type="radio" name="g_ender">Male
+                <input type="radio" name="g_ender">Transgender
+            </td>
+        </tr>-->
+        <tr>
+            <th>Password</th>
+            <td>
+                <input type="text" name="p_wd">
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit" onclick="return t()">SUBMIT</button>
+            </th>
+        </tr>
+    </table>
+</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <style>
+        .b
+        {
+            margin-top:150px;
+            margin-left:600px;
+        }
+    </style>
+</head>
+<body>
+<div class="b">
+<form method="POST">
+    {% csrf_token %}
+    <table border="1">
+        <tr>
+            <th colspan="2">Log In</th>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>
+                <input type="email" name="e_mail">
+            </td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>
+                <input type="text" name="p_wd">
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit" onclick="return t()">SUBMIT</button>
+            </th>
+        </tr>
+    </table>
+</form>
+    </div>
+</body>
+</html>
